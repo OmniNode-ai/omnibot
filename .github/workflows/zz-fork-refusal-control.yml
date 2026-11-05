@@ -1,0 +1,12 @@
+name: fork-refusal-control
+on: pull_request
+jobs:
+  control:
+    runs-on: [self-hosted, omnibase-ci-multiarch]
+    timeout-minutes: 5
+    steps:
+      - run: echo RAN-ON-LAB
+  hosted:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo hosted-ok
